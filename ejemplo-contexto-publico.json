@@ -1,0 +1,237 @@
+{
+  "version_informe": 1,
+  "modo_solicitado": "publico",
+  "fecha_corte": "2026-11-25",
+  "muestras_por_escenario": 1000,
+  "semilla": 2026,
+  "numpy": "2.0.2",
+  "nota": "Resultados condicionados a supuestos de sensibilidad. Requieren revisión humana.",
+  "fuente_publica": {
+    "id": "bcrp-PN01927AM-2026-09",
+    "serie": "PN01927AM",
+    "indicador": "Producción manufacturera de calzado",
+    "periodo": "2026-09",
+    "valor": 11.5909979001972,
+    "unidad": "variación porcentual interanual",
+    "cobertura": "Perú",
+    "sector": "calzado",
+    "fuente": "BCRPData",
+    "enlace": "https://estadisticas.bcrp.gob.pe/estadisticas/series/mensuales/resultados/PN01927AM",
+    "consulta": "https://estadisticas.bcrp.gob.pe/estadisticas/series/api/PN01927AM/json/2026-5/2026-11/esp",
+    "fecha_consulta": "2026-11-25T23:10:28-05:00"
+  },
+  "llm": null,
+  "avisos": [],
+  "escenarios": [
+    {
+      "id": "caso_ab",
+      "origen": "supuesto_demo",
+      "justificacion": "Aumento fijo del 10 % del costo por unidad de insumos.",
+      "volumen_pct": {
+        "minimo": 0,
+        "central": 0,
+        "maximo": 0
+      },
+      "precio_insumos_pct": {
+        "minimo": 10,
+        "central": 10,
+        "maximo": 10
+      },
+      "evidencia_id": null,
+      "sector": "calzado",
+      "horizonte_meses": 1,
+      "resultados": [
+        {
+          "perfil_id": "A",
+          "cuota_pen": 1200,
+          "umbral_preventivo_pen": 1846.15,
+          "fecha_evaluacion": "2026-10-01",
+          "estado": "simulado",
+          "utilidad_base_pen": 3000,
+          "utilidad_escenario_central_pen": 2300.0,
+          "cuota_sobre_utilidad_central_pct": 52.17,
+          "aumento_tolerable_insumos_pct": 16.48,
+          "utilidad_percentiles_pen": {
+            "p10": 2300.0,
+            "p50": 2300.0,
+            "p90": 2300.0
+          },
+          "proporcion_escenarios_bajo_umbral": 0.0,
+          "proporcion_escenarios_bajo_cuota": 0.0,
+          "revision_sugerida": "Revisar la vigencia de la evaluación en el seguimiento habitual."
+        },
+        {
+          "perfil_id": "B",
+          "cuota_pen": 1200,
+          "umbral_preventivo_pen": 1846.15,
+          "fecha_evaluacion": "2026-10-01",
+          "estado": "simulado",
+          "utilidad_base_pen": 2000,
+          "utilidad_escenario_central_pen": 1200.0,
+          "cuota_sobre_utilidad_central_pct": 100.0,
+          "aumento_tolerable_insumos_pct": 1.92,
+          "utilidad_percentiles_pen": {
+            "p10": 1200.0,
+            "p50": 1200.0,
+            "p90": 1200.0
+          },
+          "proporcion_escenarios_bajo_umbral": 1.0,
+          "proporcion_escenarios_bajo_cuota": 0.0,
+          "revision_sugerida": "Revisar el costo de insumos y el capital de trabajo con el asesor."
+        },
+        {
+          "perfil_id": "C",
+          "cuota_pen": 1200,
+          "umbral_preventivo_pen": 1846.15,
+          "fecha_evaluacion": "2026-10-01",
+          "estado": "sin_simulacion_individual",
+          "campos_faltantes": [
+            "ventas"
+          ],
+          "motivo": "Evaluación parcial.",
+          "revision_sugerida": "Verificar si existe una evaluación utilizable o comparables autorizados."
+        }
+      ]
+    },
+    {
+      "id": "estres_insumos",
+      "origen": "supuesto_demo",
+      "justificacion": "Rango ilustrativo de costos de insumos para probar sensibilidad.",
+      "volumen_pct": {
+        "minimo": 0,
+        "central": 0,
+        "maximo": 0
+      },
+      "precio_insumos_pct": {
+        "minimo": 0,
+        "central": 10,
+        "maximo": 20
+      },
+      "evidencia_id": null,
+      "sector": "calzado",
+      "horizonte_meses": 1,
+      "resultados": [
+        {
+          "perfil_id": "A",
+          "cuota_pen": 1200,
+          "umbral_preventivo_pen": 1846.15,
+          "fecha_evaluacion": "2026-10-01",
+          "estado": "simulado",
+          "utilidad_base_pen": 3000,
+          "utilidad_escenario_central_pen": 2300.0,
+          "cuota_sobre_utilidad_central_pct": 52.17,
+          "aumento_tolerable_insumos_pct": 16.48,
+          "utilidad_percentiles_pen": {
+            "p10": 1896.8,
+            "p50": 2277.23,
+            "p90": 2665.96
+          },
+          "proporcion_escenarios_bajo_umbral": 0.066,
+          "proporcion_escenarios_bajo_cuota": 0.0,
+          "revision_sugerida": "Revisar la vigencia de la evaluación en el seguimiento habitual."
+        },
+        {
+          "perfil_id": "B",
+          "cuota_pen": 1200,
+          "umbral_preventivo_pen": 1846.15,
+          "fecha_evaluacion": "2026-10-01",
+          "estado": "simulado",
+          "utilidad_base_pen": 2000,
+          "utilidad_escenario_central_pen": 1200.0,
+          "cuota_sobre_utilidad_central_pct": 100.0,
+          "aumento_tolerable_insumos_pct": 1.92,
+          "utilidad_percentiles_pen": {
+            "p10": 739.2,
+            "p50": 1173.97,
+            "p90": 1618.23
+          },
+          "proporcion_escenarios_bajo_umbral": 0.983,
+          "proporcion_escenarios_bajo_cuota": 0.536,
+          "revision_sugerida": "Revisar el costo de insumos y el capital de trabajo con el asesor."
+        },
+        {
+          "perfil_id": "C",
+          "cuota_pen": 1200,
+          "umbral_preventivo_pen": 1846.15,
+          "fecha_evaluacion": "2026-10-01",
+          "estado": "sin_simulacion_individual",
+          "campos_faltantes": [
+            "ventas"
+          ],
+          "motivo": "Evaluación parcial.",
+          "revision_sugerida": "Verificar si existe una evaluación utilizable o comparables autorizados."
+        }
+      ]
+    },
+    {
+      "id": "volumen_calzado",
+      "origen": "reglas_con_contexto",
+      "justificacion": "La señal nacional orienta una prueba alrededor de continuidad, con un caso adverso. El rango de volumen se eligió para sensibilidad y requiere validación.",
+      "volumen_pct": {
+        "minimo": -5,
+        "central": 0,
+        "maximo": 5
+      },
+      "precio_insumos_pct": {
+        "minimo": 0,
+        "central": 0,
+        "maximo": 0
+      },
+      "evidencia_id": "bcrp-PN01927AM-2026-09",
+      "sector": "calzado",
+      "horizonte_meses": 1,
+      "resultados": [
+        {
+          "perfil_id": "A",
+          "cuota_pen": 1200,
+          "umbral_preventivo_pen": 1846.15,
+          "fecha_evaluacion": "2026-10-01",
+          "estado": "simulado",
+          "utilidad_base_pen": 3000,
+          "utilidad_escenario_central_pen": 3000.0,
+          "cuota_sobre_utilidad_central_pct": 40.0,
+          "aumento_tolerable_insumos_pct": 16.48,
+          "utilidad_percentiles_pen": {
+            "p10": 2869.31,
+            "p50": 3008.14,
+            "p90": 3144.0
+          },
+          "proporcion_escenarios_bajo_umbral": 0.0,
+          "proporcion_escenarios_bajo_cuota": 0.0,
+          "revision_sugerida": "Revisar la vigencia de la evaluación en el seguimiento habitual."
+        },
+        {
+          "perfil_id": "B",
+          "cuota_pen": 1200,
+          "umbral_preventivo_pen": 1846.15,
+          "fecha_evaluacion": "2026-10-01",
+          "estado": "simulado",
+          "utilidad_base_pen": 2000,
+          "utilidad_escenario_central_pen": 2000.0,
+          "cuota_sobre_utilidad_central_pct": 60.0,
+          "aumento_tolerable_insumos_pct": 1.92,
+          "utilidad_percentiles_pen": {
+            "p10": 1895.44,
+            "p50": 2006.5,
+            "p90": 2115.2
+          },
+          "proporcion_escenarios_bajo_umbral": 0.026,
+          "proporcion_escenarios_bajo_cuota": 0.0,
+          "revision_sugerida": "Revisar la vigencia de la evaluación en el seguimiento habitual."
+        },
+        {
+          "perfil_id": "C",
+          "cuota_pen": 1200,
+          "umbral_preventivo_pen": 1846.15,
+          "fecha_evaluacion": "2026-10-01",
+          "estado": "sin_simulacion_individual",
+          "campos_faltantes": [
+            "ventas"
+          ],
+          "motivo": "Evaluación parcial.",
+          "revision_sugerida": "Verificar si existe una evaluación utilizable o comparables autorizados."
+        }
+      ]
+    }
+  ]
+}
