@@ -2,6 +2,11 @@
 
 Simulador mensual de resistencia económica para el caso de calzado. Recibe una estructura económica fechada y el crédito. Prueba el caso A/B de la presentación, genera distribuciones con 1.000 muestras por defecto y documenta qué escenario, fuente y semilla utilizó.
 
+## Contexto del proyecto
+
+- [AGENTS.md](AGENTS.md) conserva el contexto original del equipo y el material de la Concept Solution.
+- El [cerebro en Obsidian](https://github.com/LuisRz1/caja-pulse-360-cerebro) reúne las notas de arquitectura, procedencia de datos, validación y decisiones.
+
 ## Ejecutar
 
 Desde la carpeta de este proyecto, con Python 3.9 a 3.12.
